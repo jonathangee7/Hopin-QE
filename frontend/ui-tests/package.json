@@ -1,0 +1,16 @@
+{
+  "name": "ui-tests",
+  "version": "1.0.0",
+  "description": "stage_4_ui_tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "author": "Jonathan Gee",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.3.1",
+    "faker": "^5.5.3"
+  },
+  "dependencies": {}
+}

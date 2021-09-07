@@ -1,0 +1,16 @@
+{
+  "name": "api_tests",
+  "version": "1.0.0",
+  "description": "stage_3_api_tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Jonathan Gee",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1",
+    "supertest": "^6.1.6"
+  }
+}
