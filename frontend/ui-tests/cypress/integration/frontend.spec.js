@@ -21,14 +21,15 @@ describe('Sign In', () => {
         welcomePage.visit();
 
         const userName = faker.internet.userName();
-        let mockedRespose = { ...defaultMockedResponse, name: userName };
+        //ASSUMPTION: Timestamp from backend is correct and to the correct precision as well
+        const currentDate = new Date().toDateString()
+
+        let mockedRespose = { ...defaultMockedResponse, name: userName, timestamp: currentDate};
 
         cy.intercept('POST', 'http://localhost:3001/',
             mockedRespose
         )
 
-        //ASSUMPTION: Timestamp from backend is correct and to the correct precision as well
-        const currentDate = new Date().toDateString()
         welcomePage.typeUsername(userName);
         const customerListPage = welcomePage.clickSubmitButton();
 
